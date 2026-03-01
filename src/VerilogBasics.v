@@ -15,3 +15,12 @@ module xor_gate (
 
     assign Z = (~A & B) | (~B & A); // Can also be written as A ^ B
 endmodule
+
+module and_8bitgate (
+    input wire [7:0] A, 
+    input wire [7:0] B, 
+    output wire [7:0] Z
+);
+
+    assign Z = A & B;
+endmodule 
