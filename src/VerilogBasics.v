@@ -40,9 +40,10 @@ module mux_2to1 (
     output reg [7:0] out
 );
     always @(*) begin
-        if (sel == 0)
-            out = A;
-        else
-            out = B; 
+        case (sel)
+            1'b0: out = A;
+            1'b1: out = B;
+            default: out = 0;
+        endcase
     end
 endmodule
