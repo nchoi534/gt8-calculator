@@ -24,3 +24,12 @@ module and_8bitgate (
 
     assign Z = A & B;
 endmodule 
+
+module or_8bitgate (
+    input wire [7:0] A, 
+    input wire [7:0] B, 
+    output wire [7:0] Z
+);
+
+    assign Z = A | B;
+endmodule 
