@@ -57,3 +57,14 @@ module half_adder (
     assign sum = A ^ B; 
     assign carry = A & B;
 endmodule
+
+module full_adder (
+    input wire A,
+    input wire B,
+    input wire carryin,
+    output wire sum,
+    output wire carryout
+);
+    assign sum = A ^ B ^ carryin;
+    assign carryout = (A & B) | (A & carryin) | (B & carryin);
+endmodule
