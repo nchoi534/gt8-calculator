@@ -68,3 +68,19 @@ module full_adder (
     assign sum = A ^ B ^ carryin;
     assign carryout = (A & B) | (A & carryin) | (B & carryin);
 endmodule
+
+module adder_8bit (
+    input wire [7:0] A,
+    input wire [7:0] B,
+    output reg [7:0] sum,
+    output reg carryout, 
+);
+    reg [8:0] temp; //temp variable that holds the 9-bit result
+
+    always @(*) begin
+        temp = {1'b0, A} + {1'b0, B};
+        sum = temp[7:0]; //assign the lower 8 bits to sum
+        carryout = temp[8]; //assign the 9th bit to carryout
+    end
+    
+endmodule
