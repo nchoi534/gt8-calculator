@@ -1,5 +1,4 @@
 module alu (
-    // your ports go here
     input wire [7:0] A,
     input wire [7:0] B,
     input wire [2:0] opcode,
@@ -11,7 +10,7 @@ module alu (
     reg [8:0] temp;
     always @(*) begin
         case(opcode) 
-            3'b0: begin
+            3'b000: begin
                 carry = 1'b0;
                 overflow = 1'b0;
                 temp = {1'b0, A} + {1'b0, B};
@@ -53,7 +52,12 @@ module alu (
                 result   = ~A;
                 zero     = (result == 8'b0) ? 1 : 0;
             end
-            default: result = 0;
+            default: begin
+                result   = 8'b0;
+                carry    = 1'b0;
+                overflow = 1'b0;
+                zero     = 1'b0;
+            end
         endcase
     end
 endmodule // alu
