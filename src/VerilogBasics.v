@@ -82,5 +82,22 @@ module adder_8bit (
         sum = temp[7:0]; //assign the lower 8 bits to sum
         carryout = temp[8]; //assign the 9th bit to carryout
     end
-    
+
+endmodule
+
+module flags (
+    input wire [7:0] A,
+    input wire [7:0] B,
+    input wire [7:0] sum,
+    input wire carry_in,
+    output reg zero,
+    output reg carry,
+    output reg overflow
+);
+
+    always @(*) begin
+        zero = (sum == 8'b0) ? 1 : 0;
+        carry = carry_in;
+        overflow = ((~A[7] & ~B[7] & sum[7]) | (A[7] & B[7] & ~sum[7]));
+    end
 endmodule
