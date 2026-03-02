@@ -20,6 +20,15 @@ module alu (
                 overflow = ((~A[7] & ~B[7] & result[7]) | (A[7] & B[7] & ~result[7]));
                 zero = (result == 8'b0) ? 1 : 0;
             end
+            3'b001: begin
+                carry = 1'b0;
+                overflow = 1'b0;
+                temp = {1'b0, A} + {1'b0, ~B + 1};
+                result = temp[7:0];
+                carry = temp[8];
+                overflow = (~A[7] & B[7] & result[7]) | (A[7] & ~B[7] & ~result[7]);
+                zero = (result == 8'b0) ? 1 : 0;
+            end
             default: result = 0;
         endcase
     end
