@@ -29,6 +29,30 @@ module alu (
                 overflow = (~A[7] & B[7] & result[7]) | (A[7] & ~B[7] & ~result[7]);
                 zero = (result == 8'b0) ? 1 : 0;
             end
+            3'b010: begin
+                carry    = 1'b0;
+                overflow = 1'b0;
+                result   = A & B;
+                zero     = (result == 8'b0) ? 1 : 0;
+            end
+            3'b011: begin
+                carry    = 1'b0;
+                overflow = 1'b0;
+                result   = A | B;
+                zero     = (result == 8'b0) ? 1 : 0;
+            end
+            3'b100: begin
+                carry    = 1'b0;
+                overflow = 1'b0;
+                result   = A ^ B;
+                zero     = (result == 8'b0) ? 1 : 0;
+            end
+            3'b101: begin
+                carry    = 1'b0;
+                overflow = 1'b0;
+                result   = ~A;
+                zero     = (result == 8'b0) ? 1 : 0;
+            end
             default: result = 0;
         endcase
     end
