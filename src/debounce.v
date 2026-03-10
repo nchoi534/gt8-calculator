@@ -2,11 +2,12 @@ module debounce (
     input wire clk,
     input wire btn_in,
     output reg btn_out
+    output wire btn_pressed;
 ); 
     reg [19:0] counter;
     reg btn_prev;
     reg btn_prev_clean;
-    wire btn_pressed;
+    
 
     always @(posedge clk) begin
         if (btn_in != btn_prev) begin

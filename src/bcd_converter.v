@@ -12,15 +12,15 @@ module doubleDabber (
 
         // Step 2: Loop 8 times
         for (i = 0; i < 8; i = i + 1) begin
-            if (shift [11:8] >= 4'b0101){
+            if (shift [11:8] >= 4'b0101) begin
                 shift [11:8] = shift [11:8] + 3;
-            }
-            if (shift [15:12] >= 4'b0101){
+            end
+            if (shift [15:12] >= 4'b0101) begin
                 shift [15:12] = shift [15:12] + 3;
-            }
-            if (shift [19:16] >= 4'b0101){
+            end
+            if (shift [19:16] >= 4'b0101) begin
                 shift [19:16] = shift [19:16] + 3;
-            }
+            end
             shift = shift << 1;
         end
 

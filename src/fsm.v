@@ -7,7 +7,7 @@ module fsm (
     output reg [7:0] B,
     output reg [2:0] opcode,
     output reg [2:0] LEDR,
-    output reg [2:0] state_out
+    output wire [2:0] state_out
 );
     parameter IDLE        = 3'b000;
     parameter LOAD_A      = 3'b001;
@@ -35,8 +35,8 @@ module fsm (
                 if (key0_pressed) begin
                     if (opcode == 3'd5)
                         opcode <= 3'd0;
-                else
-                    opcode <= opcode + 1;
+                    else
+                        opcode <= opcode + 1;
                 end
                 if (key1_pressed) begin
                     state <= LOAD_B;
