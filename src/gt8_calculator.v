@@ -12,8 +12,7 @@ module gt8_calculator (
 );
 
     // Debounced button signals
-    wire key0_clean, key1_clean;
-    wire key0_pressed, key1_pressed;
+    //Debounce bypassed for testing
 
     // FSM outputs
     wire [7:0] A, B;
@@ -28,7 +27,7 @@ module gt8_calculator (
     wire [3:0] hundreds, tens, ones;    
 
     // Debounce KEY[0] and KEY[1] (invert because active LOW)
-    debounce db0 (
+    /*debounce db0 (
         .clk        (CLOCK_50),
         .btn_in     (~KEY[0]),
         .btn_out    (key0_clean),
@@ -41,12 +40,12 @@ module gt8_calculator (
         .btn_out (key1_clean),
         .btn_pressed (key1_pressed)
     );
-
+    */
     // fsm KEY[0] and KEY [1]
     fsm calculator_fsm (
         .clk(CLOCK_50),
-        .key0_pressed(key0_pressed),
-        .key1_pressed(key1_pressed),
+        .key0_pressed(~KEY[0]),
+        .key1_pressed(~KEY[1]),
         .SW(SW[7:0]),
         .A(A),
         .B(B),
