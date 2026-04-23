@@ -21,7 +21,7 @@ module gt8_calculator (
     localparam SEG_U   = 7'b1000001; // u (lowercase)
     localparam SEG_B   = 7'b0000011; // b
     localparam SEG_N   = 7'b0101011; // n
-    localparam SEG_O   = 7'b0000001; // O
+    localparam SEG_O   = 7'b1000000; // O
     localparam SEG_R   = 7'b0101111; // r
     localparam SEG_X   = 7'b0001001; // X
     localparam SEG_T   = 7'b0000111; // t
