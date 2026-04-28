@@ -1,0 +1,8 @@
+{//Client/C$/Users/Nicholas/gt8-calculator/src/alu.v} {1 {vlog -work work -stats=none {//Client/C$/Users/Nicholas/gt8-calculator/src/alu.v}
+Model Technology ModelSim DE-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}}

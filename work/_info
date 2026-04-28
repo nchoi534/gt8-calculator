@@ -11,7 +11,7 @@ cModel Technology
 dC:/Appl/modelsim_dlx64_2024.3/examples
 valu
 2//Client/C$/Users/Nicholas/gt8-calculator/src/alu.v
-!s110 1772473527
+!s110 1777335305
 !i10b 1
 !s100 A[ezdDLabYziFT0Ve==9d3
 IVRNP`1GRU94C^b3agNYoQ0
@@ -19,14 +19,14 @@ Z0 d//Client/C$$/Users/Nicholas/gt8-calculator
 w1772428094
 8//Client/C$$/Users/Nicholas/gt8-calculator/src/alu.v
 F//Client/C$$/Users/Nicholas/gt8-calculator/src/alu.v
-!i122 0
+!i122 8
 L0 1 63
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 OP;L;2024.3;79
 r1
 !s85 0
 31
-!s108 1772473525.000000
+!s108 1777335304.000000
 !s107 //Client/C$/Users/Nicholas/gt8-calculator/src/alu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|//Client/C$/Users/Nicholas/gt8-calculator/src/alu.v|
 !i113 1
@@ -34,22 +34,22 @@ Z3 o-work work
 Z4 tCvgOpt 0
 valu_tb
 2//Client/C$/Users/Nicholas/gt8-calculator/testbench/alu_tb.v
-!s110 1772473528
+!s110 1777335303
 !i10b 1
-!s100 356OD2UC5B0L6XjhZ9><W2
-ILgDMY7V]Kg11nj7Im_O:i2
+!s100 nS9X^URNARQ4f?U1@23J<3
+IEXQQ8G^8::ZUGWdP0FV>P1
 R0
-w1772431851
+w1777335265
 8//Client/C$$/Users/Nicholas/gt8-calculator/testbench/alu_tb.v
 F//Client/C$$/Users/Nicholas/gt8-calculator/testbench/alu_tb.v
-!i122 1
-L0 1 47
+!i122 7
+L0 1 71
 R1
 R2
 r1
 !s85 0
 31
-!s108 1772473527.000000
+!s108 1777335302.000000
 !s107 //Client/C$/Users/Nicholas/gt8-calculator/testbench/alu_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|//Client/C$/Users/Nicholas/gt8-calculator/testbench/alu_tb.v|
 !i113 1

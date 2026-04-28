@@ -43,11 +43,10 @@ module alu_tb;
         A = 8'd255; B = 8'd1;   opcode = 3'b000; check(8'd0,   1, 0, 1, "ADD 255+1    "); // unsigned overflow
         A = 8'd127; B = 8'd1;   opcode = 3'b000; check(8'd128, 0, 1, 0, "ADD 127+1    "); // signed overflow
 
-        // SUB tests
-        A = 8'd10;  B = 8'd5;   opcode = 3'b001; check(8'd5,   1, 0, 0, "SUB 10-5     ");
-        A = 8'd5;   B = 8'd5;   opcode = 3'b001; check(8'd0,   1, 0, 1, "SUB 5-5      "); // zero result
-        A = 8'd5;   B = 8'd10;  opcode = 3'b001; check(8'd251, 0, 0, 0, "SUB 5-10     "); // negative result
-
+        // SUB - carry=1 means borrow occurred
+        A = 8'd10; B = 8'd5;  opcode = 3'b001; check(8'd5,   0, 0, 0, "SUB 10-5  ");
+        A = 8'd5;  B = 8'd5;  opcode = 3'b001; check(8'd0,   0, 0, 1, "SUB 5-5   ");
+        A = 8'd5;  B = 8'd10; opcode = 3'b001; check(8'd251, 1, 0, 0, "SUB 5-10  ");
         // AND tests
         A = 8'b11001100; B = 8'b10101010; opcode = 3'b010; check(8'b10001000, 0, 0, 0, "AND          ");
         A = 8'd0;        B = 8'd255;      opcode = 3'b010; check(8'd0,        0, 0, 1, "AND 0&255    ");
